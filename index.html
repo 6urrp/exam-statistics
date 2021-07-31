@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Exam Statistics</title>
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="cover">
+            <h1>Exam statistics - <span class="month"></span></h1>
+            <p id="total">Total students: 0</p>
+
+            <ul class="passed-list">
+                <li class="passed">PASSED</li>
+                <li class="number-of-passed">0</li>
+            </ul> 
+            
+            <ul class="failed-list">
+                <li class="failed">FAILED</li>
+                <li class="number-of-failed">0</li>
+                <li class="percentage-of-failed"></li>
+            </ul>
+        
+        </div>
+
+        <div class="form-container">
+            <form action="get">
+                <select name="" id="subject">
+                    <option value="0">-</option>
+                    <option value="1">JavaScript</option>
+                    <option value="2">PHP</option>
+                    <option value="3">Web</option>
+                </select>
+
+                <label for="student-name"></label>
+                <input type="text" id="student-name" placeholder="Name surname">
+
+                <label for="student-grade"></label>
+                <input type="text" id="student-grade" placeholder="Grade">
+
+                <button type="submit" id="add-button">ADD</button>
+            </form>
+            <p class="error"></p>
+        </div>
+
+        <div class="student-list">
+            <div class="passed-container">
+                <h3 class="passed-title">PASSED</h3>
+                <ul class="passed-students">
+                </ul>
+            </div>
+
+            <div class="failed-container">
+                <h3 class="failed-title">FAILED</h3>
+                <ul class="failed-students">
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="js/student.js"></script>
+    <script src="js/subject.js"></script>
+    <script src="js/exam.js"></script>
+    <script src="js/report.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
